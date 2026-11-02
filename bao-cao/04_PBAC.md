@@ -263,6 +263,7 @@ resourcePolicy:
 | GĐ-P09 | [GIẢ ĐỊNH] Đội đã có Git và hệ thống CI/CD (Azure DevOps, GitLab hoặc tương đương) và chấp nhận quy trình review cho policy. | Không có CI/CD thì vòng đời policy (mục 5.8) mất phần lớn giá trị; nên làm hạ tầng CI trước. |
 | GĐ-P10 | [GIẢ ĐỊNH] Quy mô: vài trăm user nội bộ, vài nghìn user ngoài, khoảng 200.000 lượt cập cảng/năm, khoảng 10–20 file policy. | Không đổi kết luận; PDP không trạng thái nên mở rộng theo chiều ngang. |
 | GĐ-P11 | Keycloak chỉ xác thực; quyền không nằm trong JWT; claim `acr` dùng làm mức xác thực. | – |
+| GĐ-P12 | [GIẢ ĐỊNH] Hoa tiêu chỉ được xem kế hoạch **đã duyệt** (quy tắc `view` cho `HOA_TIEU` trong `berth_plan.yaml`). Mỗi đơn vị hoa tiêu phục vụ một số chi nhánh xác định (`served_branch_ids`); yêu cầu hoa tiêu chưa phân công chỉ hiện cho các đơn vị phục vụ chi nhánh đó. PHẦN 1 chưa nêu hai quy tắc này. | Nếu hoa tiêu được xem cả kế hoạch nháp thì bỏ điều kiện `status`. Nếu mọi đơn vị hoa tiêu thấy mọi yêu cầu chưa phân công thì bỏ điều kiện chi nhánh. Không đổi mức đáp ứng KB05, KB07. |
 
 ---
 

@@ -129,6 +129,7 @@ Trong đó `has_function(s, f, b)` đúng khi `{f, b}` có trong `s.functions`, 
 | GĐ-A08 | [GIẢ ĐỊNH] Quy mô: vài trăm user nội bộ, vài nghìn user ngoài, khoảng 200.000 lượt cập cảng/năm, khoảng 30–80 quy tắc ở giai đoạn ổn định. | Nếu quy tắc lên hàng trăm thì quản lý quy tắc (mục 5.8) trở thành công việc chính. |
 | GĐ-A09 | [GIẢ ĐỊNH] Quy tắc do **admin kỹ thuật hoặc nhóm phát triển** sửa trên Portal Admin, có bước kiểm thử; không giao cho người dùng nghiệp vụ tự viết biểu thức. | Nếu muốn nghiệp vụ tự sửa thì cần giao diện dạng mẫu (template) có tham số, không cho viết biểu thức tự do. |
 | GĐ-A10 | Keycloak chỉ xác thực; claim dùng được: `sub`, `azp`/`client_id`, `acr`. Thuộc tính khác lấy từ eBerth. | Nếu đưa thuộc tính vào JWT thì nhanh hơn nhưng thuộc tính cũ sống tới khi token hết hạn (KB11 kém đi). |
+| GĐ-A11 | [GIẢ ĐỊNH] Hoa tiêu chỉ được xem kế hoạch **đã duyệt** (quy tắc `PT-PLAN-VIEW`). Mỗi đơn vị hoa tiêu phục vụ một số chi nhánh xác định (bảng `pilot_unit_branch`); yêu cầu hoa tiêu chưa phân công chỉ hiện cho các đơn vị phục vụ chi nhánh đó. PHẦN 1 chưa nêu hai quy tắc này. | Nếu hoa tiêu được xem cả kế hoạch nháp thì bỏ điều kiện `status`. Nếu mọi đơn vị hoa tiêu thấy mọi yêu cầu chưa phân công thì bỏ điều kiện chi nhánh. Không đổi mức đáp ứng KB05, KB07. |
 
 ---
 
